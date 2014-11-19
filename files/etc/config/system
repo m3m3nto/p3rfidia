@@ -1,0 +1,23 @@
+config system                    
+        option hostname 'p3rfidia'
+        option timezone 'UTC'
+                                            
+config timeserver 'ntp'                     
+        list server '0.openwrt.pool.ntp.org'
+        list server '1.openwrt.pool.ntp.org'
+        list server '2.openwrt.pool.ntp.org'
+        list server '3.openwrt.pool.ntp.org'
+        option enabled '1'      
+        option enable_server '0'
+                         
+config led 'led_lan'                       
+        option name 'LAN'                  
+        option sysfs 'gl-connect:green:lan'
+        option trigger 'netdev' 
+        option dev 'eth1'       
+        option mode 'link tx rx'
+        
+config led 'led_wlan'           
+        option name 'WLAN'
+        option sysfs 'gl-connect:red:wlan'
+        option trigger 'phy0tpt'          

@@ -1,0 +1,13 @@
+User tor
+Log notice file /var/log/tor/notices.log
+DataDirectory /var/lib/tor/
+AllowUnverifiedNodes middle,rendezvous
+AutomapHostsOnResolve 1
+#AutomapHostsSuffixes .onion,.exit
+SocksPort 9050
+SocksBindAddress 172.16.1.1:9050
+VirtualAddrNetwork 10.192.0.0/10
+TransPort 9040
+TransListenAddress 172.16.1.1
+DNSPort 9053
+DNSListenAddress 172.16.1.1
